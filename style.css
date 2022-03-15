@@ -5,9 +5,7 @@ body{
 }
 p{
   margin: auto;
-  border-style: dotted;
-  border-width: 4px;
-  border-color: red;
+  outline: 4px solid red;
 }
 h1{
   padding-top: 50px;
