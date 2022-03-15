@@ -3,3 +3,7 @@ body{
   background-size: cover;
   background-position: center;
 }
+
+p{
+  border: 4px dotted red;
+}
