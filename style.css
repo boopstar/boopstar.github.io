@@ -1,4 +1,5 @@
 body{
   background-image: url("image.jpg");
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
+  background-position: top right;
 }
