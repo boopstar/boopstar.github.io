@@ -21,6 +21,19 @@ class child1:public child{
   }
 };
 
+class base1{
+};
+
+class base2{
+};
+
+class child3:public base1,public base2{
+  public:
+  void sum(){
+    cout<<a+b;
+  }
+};
+  
 int main(){
   child obj;
   obj.get_data();
