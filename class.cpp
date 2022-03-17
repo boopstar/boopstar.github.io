@@ -14,6 +14,13 @@ class child: public base{
   }
 };
 
+class child1:public child{
+  public:
+  void sum(){
+    cout<<a+b;
+  }
+};
+
 int main(){
   child obj;
   obj.get_data();
