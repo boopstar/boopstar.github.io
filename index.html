@@ -190,6 +190,335 @@ cout<<a[j]<<endl;
 return 0;
 
 }</p>
+<p>Skip to main content
+
+CloseChandigarh University | Blackboard Learn
+Manik Sheokand
+Activity Stream
+Courses
+Organizations
+Calendar
+Messages
+Grades
+Tools
+Sign Out
+Privacy
+Terms
+
+Menu
+All Courses 
+
+All courses
+
+×
+OBJECT ORIENTED PROGRAMMING USING C++
+OBJECT ORIENTED PROGRAMMING USING C++
+Skip to main content
+Course Faculty
+Nishu Bansal
+INSTRUCTOR
+
+Details & Actions
+Roster
+View everyone in your course
+
+Progress Tracking 
+Off
+
+Blackboard Collaborate
+Room closed
+
+
+Attendance
+View your attendance
+
+Groups
+View groups to join
+Announcements
+No announcements
+Books & Tools
+View course & institution tools
+
+Course Content
+Meet Your Instructor Virtually
+VISION/MISSION OF THE DEPARTMENT
+PEO's, PO's, PSO's
+Course Overview (Theory Component)
+This section contains the overview and objectives of the course. This course will make the students of all engineering streams to get acquainted with the C++ programming language.
+
+Unit 1: Fundamentals of C++
+There are three chapters in this unit. These are based on Fundamentals of C++, Classes and Objects and Constructors/Destructors. This section includes explanation of all the chapters using various tools.
+
+Unit 2: Inheritance, Polymorphism, Pointers & Virtual Functions
+There are three chapters in this unit. These are based on Inheritance, Polymorphism, Pointers and Virtual functions. This section includes explanation of all the chapters using various tools.
+
+Course Overview (Practical Component)
+This section contains the overview and objectives of the lab course. This course will make the students of all engineering streams to have good hands on knowledge of programming concepts in C++ language.
+
+Unit 1: Fundamentals of C++
+This section consists of basic programming problems based on the concepts of C++ Programming.
+
+Practical 1.1
+This practical contains the basic programming problems in C++.
+
+Practical 1.1 Manual
+This document contains the code & execution result of practical.
+
+Worksheet Submission Practical 1
+Due date: 3/15/22, 8:00 PM
+No more content items to load
+Practical 1.2
+This practical contains analytical programming problems to be solved using C++ programming language.
+
+Practical 1.2 Manual
+This document contains the code & execution result of practical.
+
+Worksheet Submission Practical 2
+Due date: 3/15/22, 11:00 PM
+No more content items to load
+Practical 1.3
+This practical contains programming problems based on inline function and static member function.
+
+Practical 1.4
+This practical contains programming problems based on constructor and destructor.
+
+No more content items to load
+Unit-2: Inheritance, Polymorphism, Pointers & Virtual Functions
+This section gives hands on experience for solving various programming problems based on Inheritance, Polymorphism and virtual functions.
+
+No more content items to load
+×
+
+Menu
+Document
+Practical 1.2 Manual
+Practical 1.2 Manual
+AIM – LEARN HOW TO USE LOOPING CONSTRUCTS USING C++
+
+PREREQUISITES- KNOWLEDGE OF LOOPING STATEMENTS
+
+LIST OF SUB PROGRAMS-
+
+ Practical 2.1: WAP to input a matrix of dimension m*n. If base address is 1000. Find the address of (m-1, n-1) element of the matrix.
+
+Solution:
+
+#include<iostream>
+
+using namespace std;
+
+      int main()
+
+      {
+
+             int b,i,j,w,lr=0,lc=0,n,m;
+
+             int a[10][10];
+
+             cout<<"enter the no. of rows in matrix";
+
+             cin>>m;
+
+             cout<<"enter no. of columns in matrix";
+
+             cin>>n;
+
+             cout<<"enter the elements in matrix";
+
+             for(i=0;i<m;i++)
+
+             {
+
+                      for(j=0;j<n;j++)
+
+                      {
+
+                                  cin>>a[i][j];
+
+                                                }
+
+                                    }
+
+                                    cout<<"enter the base address";
+
+                                    cin>>b;
+
+                                    cout<<"enter the storage size of one element stored in array";
+
+                                    cin>>w;
+
+                                    i=m-1;
+
+                                    j=n-1;
+
+                                    cout<<"address of A[i][j]"<<b + w*(n*(i-lr)+(j-lc));
+
+                                             return 0;
+
+}
+
+Output:
+
+
+
+p2.1.png
+     Figure 1. Output of Practical 2.1
+
+
+
+Practical 2.2: Create a class called employee with the following details as variables within it.
+
+1. Name of the employee (string)
+
+2. Age (int)
+
+3. Designation (string)
+
+4. Salary (double)
+
+Write a program to create array of objects for the same to access these. Also, make use of member functions to accept values and print the name, age, designation and salary.         
+
+Solution:
+
+#include<iostream>
+
+using namespace std;
+
+      class Employee
+
+      {
+
+             char Name[25];
+
+             int Age;
+
+             char Desg[8];
+
+             long Salary;
+
+             public:
+
+             void GetData();
+
+             void PutData();
+
+      };
+
+      void Employee :: GetData()          //Statement 1 : Defining GetData()
+
+      {
+
+              cout<<"\n\tEnter Employee Name : ";
+
+             cin>>Name;
+
+             cout<<"\n\tEnter Employee Age : ";
+
+             cin>>Age;
+
+                     cout<<"\n\tEnter Employee Designation:";
+
+             cin>>Desg;
+
+
+
+             cout<<"\n\tEnter Employee Salary : ";
+
+             cin>>Salary;
+
+      }
+
+
+
+      void Employee :: PutData()          //Statement 2 : Defining PutData()
+
+      {
+
+             cout<<"\nEmployee Name : "<<Name;
+
+             cout<<"\nEmployee Age : "<<Age;
+
+             cout<<"\nEmployee Designation:"<<Desg;
+
+             cout<<"\nEmployee Salary : "<<Salary;
+
+      }
+
+
+
+      int main()
+
+      {
+
+             Employee E[5];          //Statement 3 : Creating Object
+
+             int i;
+
+             for(i=0;i<5;i++)
+
+             {
+
+               E[i].GetData();         //Statement 4 : Calling GetData()
+
+             }
+
+             for(i=0;i<5;i++)
+
+             {
+
+               E[i].PutData();         //Statement 5 : Calling PutData()
+
+             }
+
+             return 0;
+
+
+
+      }
+
+Output:
+
+
+
+p2.2.png
+ Figure 2 Output of Practical 2.2
+
+
+
+Practical 2.3: WAP to illustrate the use of scope resolution operator. Display the various values of the same variables declared at different scope levels.
+
+Solution:
+#include<iostream>
+
+using namespace std;
+
+int my_variable = 10; // Global x
+
+int main()
+
+{
+
+ int my_variable = 100; // Local x
+
+ cout << "Value of global my_variable is " << ::my_variable<<endl;
+
+ cout << "Value of local my_variable is " << my_variable<<endl;
+
+ return 0;
+
+}
+
+Output:
+
+
+
+p2.3.png
+     Figure 3 Output of Practical 2.3
+
+
+
+
+Courses loaded successfully</p>
     <p id="text">This is a text for experiment and practise . bitch</p>
   </body>
 </html>
