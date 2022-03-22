@@ -3,6 +3,193 @@
   <body>
     <h1>This is a site</h1>
     <p>Hello</p>
+    <p>×
+
+Menu
+Document
+Practical 1.1 Manual
+Practical 1.1 Manual
+AIM – Learn the basics of C++ programming.
+
+PREREQUISITES- Basic knowledge of Computer Programming
+
+LIST OF SUB PROGRAMS-
+
+Practical 1.1: WAP to find average marks of five subjects of a student in a class.
+
+Solution:
+
+#include <iostream>
+
+using namespacestd;
+
+    int main(){
+
+    int subjects, i; 
+
+    float marks, total=0.0f, averageMarks, percentage;
+
+        // Input number of subjects
+
+         cout << "Enter number of subjects\n"; 
+
+    cin >> subjects; 
+
+        // Take marks of subjects as input
+
+    cout << "Enter marks of subjects\n";
+
+        for(i = 0; i < subjects; i++){
+
+       cin >> marks;
+
+       total += marks;
+
+    }
+
+         // Calculate Average
+
+    averageMarks = total / subjects;
+
+    cout << "Total Marks = "<< total; 
+
+    cout << "\nAverage Marks = "<< averageMarks; 
+
+        return0; 
+
+}
+
+Output:
+
+
+
+p1.png
+ Figure 1. Output of Practical 1.1
+
+
+
+Practical 1.2: WAP to swap first and last digits of any number. (For ex:-n=12345, Output:-52341)                                                                                      
+
+Solution:
+
+#include <iostream>
+
+#include <math.h>
+
+using namespace std;
+
+int main()
+
+{
+
+int n, first, last, sum, digits, nn, a, b;
+
+   cout <<"\n\n Find the number after swapping the first and last digits:\n";
+
+   cout <<"-------------------------------------------------------------\n";
+
+   cout <<" Input any number: ";
+
+   cin >> n;
+
+   digits =(int)log10(n);
+
+   first = n /pow(10, digits);
+
+   last = n %10;
+
+   a = first *(pow(10, digits));
+
+   b = n % a;
+
+   n = b /10;
+
+   nn = last *(pow(10, digits))+(n *10+ first);
+
+   cout <<" The number after swaping the first and last digits are: "<< nn << endl;
+
+}
+
+Output:
+
+p1.2.png
+ Figure 2. Output of Practical 1.2
+
+
+
+Practical 1.3: WAP to generate the Fibonacci series up to user specified limit. Write all the missing terms (e.g. 4, 6, 7, 9, 10, 11, 12, 14, 15…) also at the end.
+
+Solution:
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+int n,c,first=0,second=1,next;
+
+int a[20],i,j=0,count=0;
+
+cout<<"Enter the no. of terms of Fibonacci series=";
+
+cin>>n;
+
+cout<<"Terms of Fibonacci series are"<<endl;
+
+for(c=0;c<n;c++)
+
+{
+
+if(c<=1)
+
+next=c;
+
+else
+
+{
+
+next=first+second;
+
+first=second;
+
+second=next;
+
+}
+
+cout<<next<<endl;
+
+if(next-first>1)
+
+{
+
+for(i=first+1; i<next; i++)
+
+{
+
+a[j]=i;
+
+count++;
+
+j++;
+
+}
+
+}
+
+}
+
+cout<<"Missing numbers of the Fibonacci series are:"<<endl;
+
+for(j=0; j<count; j++)
+
+cout<<a[j]<<endl;
+
+return 0;
+
+}</p>
     <p id="text">This is a text for experiment and practise . bitch</p>
   </body>
 </html>
