@@ -1123,7 +1123,359 @@ p3.4.png
 Figure 4. Output of Practical 3.4
 
 Courses loaded successfully</p>
+<p>Skip to main content
 
+CloseChandigarh University | Blackboard Learn
+Manik Sheokand
+Activity Stream
+Courses
+Organizations
+Calendar
+Messages
+Grades
+Tools
+Sign Out
+Privacy
+Terms
+
+Menu
+All Courses 
+
+All courses
+
+×
+OBJECT ORIENTED PROGRAMMING USING C++
+OBJECT ORIENTED PROGRAMMING USING C++
+Skip to main content
+Course Faculty
+Nishu Bansal
+INSTRUCTOR
+
+Details & Actions
+Roster
+View everyone in your course
+
+Progress Tracking 
+Off
+
+Blackboard Collaborate
+Room closed
+
+
+Attendance
+View your attendance
+
+Groups
+View groups to join
+Announcements
+No announcements
+Books & Tools
+View course & institution tools
+
+Course Content
+Meet Your Instructor Virtually
+VISION/MISSION OF THE DEPARTMENT
+PEO's, PO's, PSO's
+Course Overview (Theory Component)
+This section contains the overview and objectives of the course. This course will make the students of all engineering streams to get acquainted with the C++ programming language.
+
+Unit 1: Fundamentals of C++
+There are three chapters in this unit. These are based on Fundamentals of C++, Classes and Objects and Constructors/Destructors. This section includes explanation of all the chapters using various tools.
+
+Unit 2: Inheritance, Polymorphism, Pointers & Virtual Functions
+There are three chapters in this unit. These are based on Inheritance, Polymorphism, Pointers and Virtual functions. This section includes explanation of all the chapters using various tools.
+
+Course Overview (Practical Component)
+This section contains the overview and objectives of the lab course. This course will make the students of all engineering streams to have good hands on knowledge of programming concepts in C++ language.
+
+Unit 1: Fundamentals of C++
+This section consists of basic programming problems based on the concepts of C++ Programming.
+
+Practical 1.1
+This practical contains the basic programming problems in C++.
+
+Practical 1.1 Manual
+This document contains the code & execution result of practical.
+
+Worksheet Submission Practical 1
+Due date: 3/15/22, 8:00 PM
+No more content items to load
+Practical 1.2
+This practical contains analytical programming problems to be solved using C++ programming language.
+
+Practical 1.2 Manual
+This document contains the code & execution result of practical.
+
+Worksheet Submission Practical 2
+Due date: 3/15/22, 11:00 PM
+No more content items to load
+Practical 1.3
+This practical contains programming problems based on inline function and static member function.
+
+Practical 1.3 Manual
+This document contains the code & execution result of practical.
+
+Pre-lab Questions Practical 3
+Due date: 3/7/22, 11:00 PM Time limit: 10 minutes
+Pre-lab Questions
+
+Post-Lab Questions Practical 3
+Due date: 3/7/22, 11:00 PM Time limit: 10 minutes
+Post-Lab Questions
+
+No more content items to load
+Practical 1.4
+This practical contains programming problems based on constructor and destructor.
+
+Practical 1.4 Manual
+This practical contains the code and execution result of practical.
+
+Pre-Lab Questions Practical 4
+Due date: 3/8/22, 11:00 PM Time limit: 10 minutes
+Pre-Lab Questions
+
+Practical 1.4 Video/Study Material
+This document contains the Lecture note based on constructor and destructor.
+
+Worksheet Submission Practical 4
+Due date: 3/19/22, 11:00 PM
+Post-Lab Questions Practical 4
+Due date: 3/8/22, 11:30 PM Time limit: 10 minutes
+Post-Lab Questions
+
+Online Compiler
+This link provides the facility to execute programming problems.
+
+No more content items to load
+No more content items to load
+Unit-2: Inheritance, Polymorphism, Pointers & Virtual Functions
+This section gives hands on experience for solving various programming problems based on Inheritance, Polymorphism and virtual functions.
+
+No more content items to load
+×
+
+Menu
+Document
+Practical 1.4 Manual
+Practical 1.4 Manual
+AIM – LEARN HOW TO USE CONSTRUCTOR AND DESTRUCTOR IN C++
+
+PREREQUISITES- KNOWLEDGE OF CLASSES AND CONSTRUCTOR
+
+LIST OF SUB PROGRAMS-
+
+
+
+Practical 4.1: WAP to find area of rectangle using constructor overloading. Also define destructor to delete the memory allocated to objects.
+
+Solution:
+#include<iostream>
+
+using namespace std;
+
+class area
+
+{
+
+  int a,l,b;
+
+  public:
+
+  area() // simple constructor definition.
+
+  {
+
+     l=5;
+
+     b=6;
+
+     cout<<"Simple constructor called\n";
+
+     cout<<"length="<<l<<"\nbreadth="<<b<<endl;
+
+  }
+
+  area(int x,int y) // parameterised constructor
+
+  {
+
+     l=x;
+
+     b=y;
+
+  }
+
+  void calc();
+
+  void print();
+
+  ~area();
+
+};
+
+void area::calc()
+
+{
+
+   a=l*b;
+
+}
+
+void area::print()
+
+{
+
+   cout<<"Area is : "<<a<<endl;
+
+}
+
+area::~area()
+
+{
+
+cout << "Object is being deleted" << endl;
+
+}
+
+int main()
+
+{
+
+   int l,b;
+
+   area a1; // simple constructor is called.
+
+   a1.calc();
+
+   a1.print();
+
+   cout<<"Enter length and breadth for parameterised        constructor:\n";
+
+   cin>>l>>b;
+
+   area a2(l,b); // parameterised constructor is called.
+
+   a2.calc();
+
+   a2.print();
+
+   return 0;
+
+}
+
+Output:
+
+
+
+
+
+P4.1.png
+     Figure 1 Output of Practical 4.1
+
+
+
+Practical 4.2: WAP to create database of the following items: Name of the student (String), Roll number of the student (int), Height of the student (cm), Weight of the student (kg/gms)
+
+1) Create a Constructor to initialize values
+
+2) Create display () function to display the details
+
+3) Illustrate the use of copy constructor
+
+4) Also implement the concept of destructor.           
+
+Solution:
+
+#include <iostream>
+
+using namespace std;
+
+
+
+class student
+
+{
+
+           private:
+
+                       string name;
+
+                       int  rollNo;
+
+                       int  height;
+
+                       int weight;
+
+           public:
+
+                       student(string n,int r,int h,int w)
+
+               {
+
+                   name=n;
+
+                   rollNo=r;
+
+                   height=h;
+
+                   weight=w;
+
+                }
+
+                       //member function to print student's details
+
+                       void display(void);
+
+                       ~student();
+
+};
+
+
+
+void student::display(void){
+
+           cout << "Student details:\n";
+
+           cout << "Name:"<< name << ",Roll Number:" << rollNo << ",Height:" << height << ",Weight:" << weight;
+
+}
+
+student :: ~student()
+
+{
+
+           cout<<"destructor is called\n";
+
+}
+
+int main()
+
+{
+
+           student std("mohit",1234,6,78);                    //object creation
+
+           student std1=std;
+
+           std1.display();
+
+           
+
+           return 0;
+
+}
+
+Output:
+
+
+
+P4.2.png
+
+
+Figure 2 Output of Practical 4.2
+
+
+
+Courses loaded successfully</p>
     <p id="text">This is a text for experiment and practise . bitch</p>
   </body>
 </html>
