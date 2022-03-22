@@ -519,6 +519,611 @@ p2.3.png
 
 
 Courses loaded successfully</p>
+<p>Skip to main content
+
+CloseChandigarh University | Blackboard Learn
+Manik Sheokand
+Activity Stream
+Courses
+Organizations
+Calendar
+Messages
+Grades
+Tools
+Sign Out
+Privacy
+Terms
+
+Menu
+All Courses 
+
+All courses
+
+×
+OBJECT ORIENTED PROGRAMMING USING C++
+OBJECT ORIENTED PROGRAMMING USING C++
+Skip to main content
+Course Faculty
+Nishu Bansal
+INSTRUCTOR
+
+Details & Actions
+Roster
+View everyone in your course
+
+Progress Tracking 
+Off
+
+Blackboard Collaborate
+Room closed
+
+
+Attendance
+View your attendance
+
+Groups
+View groups to join
+Announcements
+No announcements
+Books & Tools
+View course & institution tools
+
+Course Content
+Meet Your Instructor Virtually
+VISION/MISSION OF THE DEPARTMENT
+PEO's, PO's, PSO's
+Course Overview (Theory Component)
+This section contains the overview and objectives of the course. This course will make the students of all engineering streams to get acquainted with the C++ programming language.
+
+Unit 1: Fundamentals of C++
+There are three chapters in this unit. These are based on Fundamentals of C++, Classes and Objects and Constructors/Destructors. This section includes explanation of all the chapters using various tools.
+
+Unit 2: Inheritance, Polymorphism, Pointers & Virtual Functions
+There are three chapters in this unit. These are based on Inheritance, Polymorphism, Pointers and Virtual functions. This section includes explanation of all the chapters using various tools.
+
+Course Overview (Practical Component)
+This section contains the overview and objectives of the lab course. This course will make the students of all engineering streams to have good hands on knowledge of programming concepts in C++ language.
+
+Unit 1: Fundamentals of C++
+This section consists of basic programming problems based on the concepts of C++ Programming.
+
+Practical 1.1
+This practical contains the basic programming problems in C++.
+
+Practical 1.1 Manual
+This document contains the code & execution result of practical.
+
+Worksheet Submission Practical 1
+Due date: 3/15/22, 8:00 PM
+No more content items to load
+Practical 1.2
+This practical contains analytical programming problems to be solved using C++ programming language.
+
+Practical 1.2 Manual
+This document contains the code & execution result of practical.
+
+Worksheet Submission Practical 2
+Due date: 3/15/22, 11:00 PM
+No more content items to load
+Practical 1.3
+This practical contains programming problems based on inline function and static member function.
+
+Practical 1.3 Manual
+This document contains the code & execution result of practical.
+
+Pre-lab Questions Practical 3
+Due date: 3/7/22, 11:00 PM Time limit: 10 minutes
+Pre-lab Questions
+
+Post-Lab Questions Practical 3
+Due date: 3/7/22, 11:00 PM Time limit: 10 minutes
+Post-Lab Questions
+
+No more content items to load
+Practical 1.4
+This practical contains programming problems based on constructor and destructor.
+
+No more content items to load
+Unit-2: Inheritance, Polymorphism, Pointers & Virtual Functions
+This section gives hands on experience for solving various programming problems based on Inheritance, Polymorphism and virtual functions.
+
+No more content items to load
+×
+
+Menu
+Document
+Practical 1.3 Manual
+Practical 1.3 Manual
+AIM –Learn how to implement Object Oriented Concepts like inline and static data members in C++ Programming.
+
+PREREQUISITES- KNOWLEDGE OF C++
+
+LIST OF SUB PROGRAMS-
+
+Practical 3.1: Write a program to find the largest& smallest of three numbers. (Use inline function MAX and MIN)
+
+Solution:
+
+#include <stdio.h>
+
+// macro/inline function to get max of 3 numbers
+
+#define MAX(a,b,c) (a > b && a > c ? a : (b > c ? b : c))
+
+// macro/inline function to get min of 3 numbers
+
+#define MIN(a,b,c) (a < b && a < c ? a : (b < c ? b : c))
+
+int main()
+
+{
+
+int x, y, z, large, small;
+
+   // accept 3 numbers from console
+
+printf("Enter 3 numbers: ");
+
+scanf("%d%d%d", &x, &y, &z);
+
+
+
+   // call inline function to get the max and min of inputed numbers
+
+large = MAX(x, y, z);
+
+small = MIN(x, y, z);
+
+   // print the largest and smallest numbers
+
+printf("\nMax between %d, %d, and %d is %d.", x, y, z, large);
+
+printf("\nMin between %d, %d, and %d is %d.", x, y, z, small);
+
+return 0;
+
+}
+
+Output:
+
+ 
+
+
+
+p3.1.png
+ Figure 1. Output of Practical 3.1
+
+
+
+Practical 3.2: A dining hall can accommodate only 50 guests. Create a class to store seat number (Generated Automatically) and name of the guests who are seated on first come first seated basis. Define functions to display name of all guests along with seat number. Write a program to show the working of this class using the concept of static data member and static function    
+
+
+
+Solution:
+
+#include <iostream>
+
+#define MAX_SIZE 50
+
+using namespace std;
+
+// definition of guest class as we are required guest name and seat number
+
+class Guest {
+
+public:
+
+char name[50];
+
+intseatno;
+
+};
+
+
+
+// defination of Hall class having function to allote and list guest
+
+class Hall {
+
+public:
+
+       // static member data
+
+staticint front, rear;
+
+static Guest allGuest[MAX_SIZE];
+
+
+
+       // static member function for alloting the seat to the guest in FIFO order
+
+staticintalloteSeat() {
+
+if (rear == (MAX_SIZE - 1)) {
+
+cout<< "Hall is full!";
+
+return 0;
+
+           }
+
+
+
+rear++;
+
+cout<< "Enter Guest Name: ";
+
+cin>>allGuest[rear].name;
+
+allGuest[rear].seatno = rear + 1;
+
+return 1;
+
+       }
+
+
+
+       // static member function to list the guests with name nad seat number
+
+static void listGuest() {
+
+while(++front <= rear) {
+
+cout<< "\nGuest " <<allGuest[front].name << " is seated on seat S" <<allGuest[front].seatno<< ".";
+
+           }
+
+rear = front = -1;
+
+       }
+
+
+
+};
+
+
+
+// initlizing the static member data
+
+int Hall::front = -1;
+
+int Hall::rear = -1;
+
+Guest Hall::allGuest[MAX_SIZE] = {};
+
+
+
+int main()
+
+{
+
+   // alloting the seat to the guest
+
+   Hall::alloteSeat();
+
+   Hall::alloteSeat();
+
+   Hall::alloteSeat();
+
+   Hall::alloteSeat();
+
+
+
+   // listing the guest with seat number
+
+   Hall::listGuest();
+
+return 0;
+
+}
+
+
+
+Output:
+
+ 
+
+p3.2.png
+ Figure 2. Output of Practical 3.2
+
+
+
+Practical 3.3: WAP to swap private data members of classes named as class_1, class_2 using friend function.
+
+
+Solution:
+#include<iostream>
+
+using namespace std;
+
+class class_2;
+
+// defining class 1 having friend function swap
+
+class class_1
+
+{
+
+   // member data
+
+protected:
+
+int num1;
+
+public:
+
+       class_1()
+
+       {
+
+           num1=10;
+
+       }
+
+
+
+       // member function to show the value of member data
+
+void show()
+
+       {
+
+cout<<"\n Value of Class 1 : "<<num1;
+
+       }
+
+
+
+       // friend function declaration
+
+friend void swap(class_1 *num1, class_2 *num2);
+
+};
+
+
+
+// defining class 2 having friend function swap
+
+class class_2
+
+{
+
+   // member data
+
+protected:
+
+int num2;
+
+public:
+
+       class_2()
+
+       {
+
+           num2=20;
+
+       }
+
+
+
+       // member function to show the value of member data
+
+void show()
+
+       {
+
+cout<<"\n Value of Class 2 : "<<num2;
+
+       }
+
+
+
+       // friend function declaration
+
+friend void swap(class_1 *num1, class_2 *num2);
+
+};
+
+
+
+// definition of swap friend function
+
+void swap(class_1 *no1, class_2 *no2)
+
+{
+
+int no3;
+
+   no3=no1->num1;
+
+   no1->num1=no2->num2;
+
+   no2->num2=no3;
+
+}
+
+
+
+int main()
+
+{
+
+class_1 a;
+
+class_2 b;
+
+cout<< "Values befor Swap";
+
+a.show();
+
+b.show();
+
+swap(&a, &b);
+
+cout<< "\n\nValues after Swap";
+
+a.show();
+
+b.show();
+
+return 0;
+
+}
+
+
+
+Output:
+
+ 
+
+
+
+p3.3.png
+ Figure 3. Output of Practical 3.3
+
+
+
+Practical 3.4:WAP to create a class complex to represent complex numbers. The complex class should use a function to add two complex numberswhich are passed as arguments. The function should return an object of type complex representing the sum of two complex numbers.
+
+Solution:
+
+#include<iostream>
+
+using namespace std;
+
+// defining a class to represent a complex number
+
+class complex
+
+{
+
+   // member data to store the complex number parts
+
+private:
+
+       // real part
+
+               float r;
+
+                  // imaginary part
+
+               floati;
+
+
+
+public:
+
+       // set the values
+
+               void set(float real, float img)
+
+               {
+
+                               r = real;
+
+                               i = img;
+
+               }
+
+
+
+       // member function to sum the self and one another complex number
+
+               complex sum(complex c)
+
+       {
+
+               complex t;
+
+               t.r = r + c.r;
+
+               t.i = i + c.i;
+
+               return t;
+
+       }
+
+
+
+       // function to print the complex number
+
+               voiddisp()
+
+                  {
+
+                      // since the imaginary number multiplicant of some real number
+
+                      // and thus when 1 is multiplied with any number will remain same
+
+               if (i == -1) {
+
+               cout<< r << " + -i" <<endl;
+
+                      }
+
+               else if (i == 1) {
+
+               cout<< r << " + i" <<endl;
+
+                      }
+
+               else if (i == 0) {
+
+                          // since imaginary part is zero so only real part will be available
+
+               cout<< r <<endl;
+
+                      }
+
+               else {
+
+               cout<< r << " + " <<i<< "i" <<endl;
+
+                      }
+
+       }
+
+};
+
+int main()
+
+{
+
+               complex c1, c2, c3;
+
+               c1.set(2.5, 3.5);
+
+               c2.set(1.5, 5.5);
+
+              c3 = c1.sum(c2);
+
+               cout<<"Complex Number 1 = ";
+
+               c1.disp();
+
+               cout<<"Complex Number 2 = ";
+
+               c2.disp();
+
+               cout<<"Complex Number 3 = ";
+
+               c3.disp();
+
+               return 0;
+
+}
+
+
+
+Output:
+
+p3.4.png
+
+
+Figure 4. Output of Practical 3.4
+
+Courses loaded successfully</p>
+
     <p id="text">This is a text for experiment and practise . bitch</p>
   </body>
 </html>
