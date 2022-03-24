@@ -19,7 +19,7 @@ int num3;
 class D: public B, public C
 {
 public:
-void sum()
+void sum();
 cout<<num1+num2+num3;
 };
 
